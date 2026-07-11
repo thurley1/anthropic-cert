@@ -1,0 +1,5 @@
+{
+  // Run notebook kernels from the repo root so load_dotenv() finds the
+  // root .env no matter which section subfolder the notebook lives in.
+  "jupyter.notebookFileRoot": "${workspaceFolder}"
+}

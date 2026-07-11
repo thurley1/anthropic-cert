@@ -6,8 +6,26 @@ Environment for the Anthropic certification course exercises (Python SDK + Jupyt
 
 - **`.venv/`** — Python 3.13 virtual environment with `anthropic`, `python-dotenv`, `jupyter`, `ipykernel`
 - **Jupyter kernel** — registered as **Python (anthropic-cert)**
-- **`getting-started.ipynb`** — walks through the four "Getting Started" steps
 - **`.env.example`** — template for your API key
+- **Section folders** — notebooks are organized by course section (see below)
+
+## Folder structure
+
+Notebooks are grouped by course section, numbered to match the course order:
+
+| Folder | Course section |
+|--------|----------------|
+| `01-accessing-the-api/` | Accessing Claude with the API (requests, multi-turn, system prompts, temperature, streaming) |
+| `02-prompt-evaluation/` | Prompt evaluation |
+| `03-prompt-engineering/` | Prompt engineering techniques |
+| `04-tool-use/` | Tool use with Claude |
+| `05-rag/` | RAG and Agentic Search |
+| `06-features/` | Features of Claude |
+| `07-mcp/` | Model Context Protocol |
+| `08-anthropic-apps/` | Anthropic apps — Claude Code and computer use |
+| `09-agents-and-workflows/` | Agents and workflows |
+
+`.env`, `requirements.txt`, and this README stay at the repo root. `.vscode/settings.json` pins the Jupyter working directory to the repo root so `load_dotenv()` finds `.env` from any section folder.
 
 ## One-time: add your API key
 
@@ -26,7 +44,7 @@ Copy-Item .env.example .env
 jupyter notebook
 ```
 
-Then open `getting-started.ipynb` and confirm the kernel (top-right) is **Python (anthropic-cert)**.
+Then open a notebook (e.g. `01-accessing-the-api/getting-started.ipynb`) and confirm the kernel (top-right) is **Python (anthropic-cert)**.
 
 > Prefer VS Code? Just open the folder, open the `.ipynb`, and pick the **Python (anthropic-cert)** kernel — no need to launch Jupyter in a browser.
 
