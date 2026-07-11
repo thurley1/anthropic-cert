@@ -11,10 +11,19 @@ Environment for the Anthropic certification course exercises (Python SDK + Jupyt
 
 ## Folder structure
 
-Notebooks are grouped by course section, numbered to match the course order:
+This repo holds work from the **Claude Partner Network** learning path — one top-level folder per course. A single shared `.venv` and `.env` at the repo root serve every course.
 
-| Folder | Course section |
-|--------|----------------|
+| Course folder | CPN course |
+|---------------|------------|
+| `building-with-the-claude-api/` | Building with the Claude API |
+| `introduction-to-agent-skills/` | Introduction to Agent Skills |
+| `introduction-to-mcp/` | Introduction to Model Context Protocol |
+| `claude-code-in-action/` | Claude Code in Action |
+
+Within `building-with-the-claude-api/`, notebooks are grouped by course section, numbered to match the course order:
+
+| Section folder | Course section |
+|----------------|----------------|
 | `01-accessing-the-api/` | Accessing Claude with the API (requests, multi-turn, system prompts, temperature, streaming) |
 | `02-prompt-evaluation/` | Prompt evaluation |
 | `03-prompt-engineering/` | Prompt engineering techniques |
@@ -25,7 +34,7 @@ Notebooks are grouped by course section, numbered to match the course order:
 | `08-anthropic-apps/` | Anthropic apps — Claude Code and computer use |
 | `09-agents-and-workflows/` | Agents and workflows |
 
-`.env`, `requirements.txt`, and this README stay at the repo root. `.vscode/settings.json` pins the Jupyter working directory to the repo root so `load_dotenv()` finds `.env` from any section folder.
+`.env`, `requirements.txt`, and this README stay at the repo root. `.vscode/settings.json` pins the Jupyter working directory to the repo root so `load_dotenv()` finds `.env` from any course/section folder, however deeply nested.
 
 ## One-time: add your API key
 
@@ -44,7 +53,7 @@ Copy-Item .env.example .env
 jupyter notebook
 ```
 
-Then open a notebook (e.g. `01-accessing-the-api/getting-started.ipynb`) and confirm the kernel (top-right) is **Python (anthropic-cert)**.
+Then open a notebook (e.g. `building-with-the-claude-api/01-accessing-the-api/01-getting-started.ipynb`) and confirm the kernel (top-right) is **Python (anthropic-cert)**.
 
 > Prefer VS Code? Just open the folder, open the `.ipynb`, and pick the **Python (anthropic-cert)** kernel — no need to launch Jupyter in a browser.
 
