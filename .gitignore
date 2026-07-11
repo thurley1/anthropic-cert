@@ -1,0 +1,10 @@
+# Never commit your real API key
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
