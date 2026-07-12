@@ -1,14 +1,17 @@
 [
   {
-    "task": "Parse an AWS S3 bucket name from an S3 URI (e.g., 's3://my-bucket/path/to/file.txt') and extract just the bucket name",
-    "format": "regex"
+    "task": "Parse an AWS CloudWatch log entry and extract the timestamp, log level, and message. The log format is: '[TIMESTAMP] [LEVEL] Message text'",
+    "format": "regex",
+    "solution_criteria": "Regex should correctly capture three groups: timestamp (ISO 8601 format), log level (ERROR, WARN, INFO, DEBUG), and message text. Should handle variable-length messages and special characters."
   },
   {
-    "task": "Create a JSON CloudFormation template for an IAM role that trusts the EC2 service",
-    "format": "json"
+    "task": "Write a Python function that takes an AWS S3 bucket name and file key, then returns the S3 URI in the format 's3://bucket-name/key'. The function should validate that the bucket name is not empty and follows AWS naming conventions (lowercase, hyphens allowed).",
+    "format": "python",
+    "solution_criteria": "Function should return valid S3 URIs, validate bucket names (3-63 characters, lowercase alphanumeric and hyphens), and handle edge cases like leading/trailing slashes in keys."
   },
   {
-    "task": "Write a Python function that takes an AWS region code and returns the corresponding region name (e.g., 'us-east-1' returns 'N. Virginia')",
-    "format": "python"
+    "task": "Create a JSON CloudFormation template snippet that defines an AWS IAM role with a trust relationship allowing the Lambda service to assume the role. The role should have a descriptive name and include basic metadata.",
+    "format": "json",
+    "solution_criteria": "JSON should be valid CloudFormation syntax, include AssumeRolePolicyDocument with Lambda service principal, contain proper Version and Statement structures, and be a complete, deployable snippet."
   }
 ]
