@@ -1,0 +1,70 @@
+[
+  {
+    "output": "```json\n[\n  \"Roman Empire military innovations\",\n  \"Legionary system\",\n  \"Fortification techniques\",\n  \"European defense architecture\",\n  \"Artificial intelligence\",\n  \"Sports analytics\",\n  \"Machine learning algorithms\",\n  \"Player performance evaluation\",\n  \"Injury risk prediction\",\n  \"Game strategy optimization\",\n  \"Printing press\",\n  \"Gutenberg\",\n  \"Knowledge distribution\",\n  \"Intellectual development\",\n  \"Scientific discoveries\",\n  \"Industrial Revolution\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The ancient Roman Empire's military innovations revolutionized warfare strategy, particularly through the development of the legionary system and fortification techniques that influenced European defense architecture for centuries. Meanwhile, the emergence of artificial intelligence in modern sports analytics has transformed how teams evaluate player performance, with machine learning algorithms now predicting injury risk with 87% accuracy and optimizing game strategies in real-time. Simultaneously, the invention of the printing press by Gutenberg in the 15th century democratized knowledge distribution, fundamentally altering the course of human intellectual development and enabling the rapid dissemination of scientific discoveries that would later fuel the Industrial Revolution."
+      },
+      "solution_criteria": [
+        "Identifies all three distinct domains: history, sports/technology, and history/technology",
+        "Extracts main topics without omitting any major subject areas discussed",
+        "Distinguishes between topics even when they span different time periods and fields"
+      ],
+      "task_description": "Identify and list the main topics discussed in a passage of text",
+      "scenario": "Testing with a passage that mixes multiple unrelated domains (e.g., history, technology, and sports) to evaluate topic extraction across diverse subject areas"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all three mandatory criteria: it identifies topics from history (Roman Empire, printing press), sports/technology (AI, sports analytics), and spans different time periods and fields. All major subject areas are covered without significant omissions. The extraction is thorough and accurate. The main limitation is presentation style\u2014the list is somewhat granular and lacks organizational structure\u2014but this does not violate the stated criteria, which focus on identification and extraction rather than organization or presentation format."
+  },
+  {
+    "output": "```json\n[\n  \"Photosynthesis\",\n  \"Light energy\",\n  \"Chemical energy\",\n  \"Glucose\",\n  \"Chloroplasts\",\n  \"Chlorophyll\",\n  \"Photons\",\n  \"Sunlight\",\n  \"Light-dependent reactions\",\n  \"Thylakoid membranes\",\n  \"ATP\",\n  \"NADPH\",\n  \"Light-independent reactions\",\n  \"Calvin cycle\",\n  \"Carbon dioxide fixation\",\n  \"Three-phosphoglycerate\",\n  \"Metabolic pathway\",\n  \"Food chains\",\n  \"Oxygen production\",\n  \"Aerobic respiration\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Photosynthesis is the biochemical process by which plants convert light energy into chemical energy stored in glucose molecules. This process occurs primarily in the chloroplasts of plant cells, where chlorophyll pigments absorb photons from sunlight. The light-dependent reactions take place in the thylakoid membranes, generating ATP and NADPH, while the light-independent reactions, or Calvin cycle, utilize these energy carriers to fix carbon dioxide into three-phosphoglycerate and ultimately produce glucose. This fundamental metabolic pathway is essential for nearly all life on Earth, as it forms the base of most food chains and produces the oxygen necessary for aerobic respiration."
+      },
+      "solution_criteria": [
+        "Identifies photosynthesis as the single primary topic",
+        "Does not list unrelated or tangential topics",
+        "Recognizes that subtopics (light reactions, Calvin cycle) are components of one main subject, not separate main topics"
+      ],
+      "task_description": "Identify and list the main topics discussed in a passage of text",
+      "scenario": "Testing with a brief, single-topic passage to verify the prompt correctly identifies when there is only one primary subject matter"
+    },
+    "score": 2,
+    "reasoning": "The solution fundamentally misinterprets the task. The criteria explicitly require identifying photosynthesis as 'the single primary topic' and recognizing that subtopics like light reactions and Calvin cycle are 'components of one main subject, not separate main topics.' Instead, the solution provides a flat list of 20 individual concepts, treating each as equally important. While all items are accurate and relevant, this approach violates the core requirement to consolidate related concepts under main topics. The task asks to identify main topics (implying a hierarchical structure), not to enumerate all concepts mentioned in the passage."
+  },
+  {
+    "output": "```json\n[\n  \"Climate change mitigation strategies\",\n  \"Global temperatures\",\n  \"Renewable energy sources\",\n  \"Solar power\",\n  \"Wind power\",\n  \"Carbon emissions\",\n  \"Electricity generation\",\n  \"Infrastructure investment\",\n  \"Battery storage systems\",\n  \"Intermittency challenges\",\n  \"Deforestation\",\n  \"Tropical regions\",\n  \"Atmospheric carbon levels\",\n  \"Reforestation\",\n  \"Forest conservation\",\n  \"Agricultural practices\",\n  \"Methane emissions\",\n  \"Livestock farming\",\n  \"Greenhouse gas emissions\",\n  \"International policy coordination\",\n  \"Financing mechanisms\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Climate change mitigation strategies have become increasingly critical as global temperatures continue to rise. Renewable energy sources, particularly solar and wind power, represent a primary avenue for reducing carbon emissions from electricity generation. However, the transition to renewable energy requires substantial infrastructure investment and technological advancement in battery storage systems to address intermittency challenges. Simultaneously, deforestation in tropical regions contributes significantly to atmospheric carbon levels, making reforestation and forest conservation essential complementary approaches. Agricultural practices also play a crucial role, as methane emissions from livestock farming account for approximately 14% of global greenhouse gas emissions. While renewable energy infrastructure and agricultural reform are distinct intervention points, both depend on international policy coordination and financing mechanisms to achieve meaningful climate impact."
+      },
+      "solution_criteria": [
+        "Identifies all distinct main topics without conflating overlapping themes (e.g., renewable energy, deforestation/reforestation, agricultural emissions, and policy/financing as separate topics)",
+        "Distinguishes main topics from supporting details (e.g., specific percentages and examples are details, not main topics)",
+        "Recognizes that policy coordination is a cross-cutting theme rather than a standalone main topic"
+      ],
+      "task_description": "Identify and list the main topics discussed in a passage of text",
+      "scenario": "Testing with a multi-paragraph passage containing overlapping topics to assess the prompt's ability to identify distinct main topics versus supporting details"
+    },
+    "score": 6,
+    "reasoning": "The solution meets the core mandatory requirement of identifying distinct main topics without conflating overlapping themes. It correctly recognizes renewable energy, deforestation/reforestation, agricultural practices, and policy/financing as separate intervention points. However, it violates the secondary criterion of distinguishing main topics from supporting details in three ways: (1) solar and wind power are examples within renewable energy rather than independent main topics, (2) global temperatures is contextual motivation rather than a main topic, and (3) intermittency challenges is a supporting detail explaining battery storage necessity. A more refined solution would consolidate these into approximately 6-8 core topics: climate change mitigation strategies, renewable energy, battery storage, deforestation/reforestation, agricultural emissions, and international policy/financing. The solution demonstrates good comprehension but lacks appropriate hierarchical organization of topics."
+  },
+  {
+    "output": "```json\n[\n  \"Industrial growth\",\n  \"Social hierarchies\",\n  \"Economic structures\",\n  \"Factory mechanization\",\n  \"Textile production\",\n  \"Skilled artisans\",\n  \"Urban migration\",\n  \"Rural populations\",\n  \"Manufacturing centers\",\n  \"Living conditions\",\n  \"Cholera\",\n  \"Typhoid epidemics\",\n  \"Medical reform\",\n  \"Disease transmission\",\n  \"Germ theory\",\n  \"Technological progress\",\n  \"Railway network\",\n  \"Goods distribution\",\n  \"Mass movement of people\",\n  \"Disease spread\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The Victorian era witnessed unprecedented industrial growth that fundamentally transformed social hierarchies and economic structures across Europe. Factory mechanization increased textile production by 400%, yet simultaneously displaced skilled artisans whose craftsmanship traditions dated back centuries. Urban migration accelerated as rural populations sought employment in manufacturing centers, creating dense, unsanitary living conditions that became breeding grounds for cholera and typhoid epidemics. Medical reformers like John Snow began investigating disease transmission patterns, laying groundwork for germ theory, while social philosophers debated whether technological progress represented genuine human advancement or merely shifted suffering from countryside to city. The railway network's expansion enabled both efficient goods distribution and mass movement of people, inadvertently facilitating disease spread across previously isolated communities."
+      },
+      "solution_criteria": [
+        "Identifies explicit topics: industrial growth, mechanization, urban migration, disease epidemics, railway expansion",
+        "Identifies implicit/inferred topics: social displacement, working conditions, medical science advancement, technological ethics",
+        "Distinguishes between direct subjects and contextually important underlying themes"
+      ],
+      "task_description": "Identify and list the main topics discussed in a passage of text",
+      "scenario": "Testing with a passage containing implicit or subtly woven topics that require inference to ensure the prompt captures both explicit and contextually important subjects"
+    },
+    "score": 5,
+    "reasoning": "The solution meets the mandatory requirement of identifying explicit topics but significantly underperforms on the secondary criteria. The criteria explicitly require identifying implicit/inferred topics and distinguishing between direct subjects and underlying themes. The solution instead provides a flat list of specific mentions without synthesizing the passage's deeper conceptual layers. For example, the passage discusses 'social displacement' through the discussion of artisans losing livelihoods and rural-to-urban migration, 'working conditions' through references to 'unsanitary living conditions,' 'medical science advancement' through germ theory development, and 'technological ethics' through the philosophical debate about whether progress represents genuine advancement. These thematic abstractions are absent from the solution, representing a material gap against stated criteria."
+  }
+]

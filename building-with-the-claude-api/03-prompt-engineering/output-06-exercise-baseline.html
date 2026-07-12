@@ -1,0 +1,252 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">4</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">7.2 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">75.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a passage that mixes multiple unrelated domains (e.g., history, technology, and sports) to evaluate topic extraction across diverse subject areas</td>
+                <td class="prompt-inputs"><strong>content:</strong> The ancient Roman Empire's military innovations revolutionized warfare strategy, particularly through the development of the legionary system and fortification techniques that influenced European defense architecture for centuries. Meanwhile, the emergence of artificial intelligence in modern sports analytics has transformed how teams evaluate player performance, with machine learning algorithms now predicting injury risk with 87% accuracy and optimizing game strategies in real-time. Simultaneously, the invention of the printing press by Gutenberg in the 15th century democratized knowledge distribution, fundamentally altering the course of human intellectual development and enabling the rapid dissemination of scientific discoveries that would later fuel the Industrial Revolution.</td>
+                <td class="criteria">• Identifies all three distinct domains: history, sports/technology, and history/technology<br>• Extracts main topics without omitting any major subject areas discussed<br>• Distinguishes between topics even when they span different time periods and fields</td>
+                <td class="output"><pre># Topics Covered
+
+This passage contains three distinct topics:
+
+1. **Ancient Roman Military History**
+   - Legionary system
+   - Fortification techniques
+   - Influence on European defense architecture
+
+2. **Modern Sports Analytics & Artificial Intelligence**
+   - Machine learning in player performance evaluation
+   - Injury risk prediction
+   - Real-time game strategy optimization
+
+3. **History of Information Technology**
+   - Gutenberg's printing press (15th century)
+   - Knowledge democratization
+   - Impact on scientific discovery and the Industrial Revolution
+
+**Note:** These topics are quite disparate and span different time periods (ancient Rome, 15th century, and modern era), suggesting this passage may be an example of disconnected or poorly organized writing.</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all three mandatory criteria: (1) identifies all three distinct domains (ancient Roman history, modern sports/AI technology, and printing press history/technology), (2) extracts main topics comprehensively without omitting major subject areas (legionary system, fortification, ML algorithms, injury prediction, printing press, knowledge democratization, Industrial Revolution), and (3) clearly distinguishes between topics despite their different time periods and fields. The organizational structure is logical and complete. The added note about disconnected writing is tangential to the core task but does not detract from the core deliverable. The solution directly addresses what was asked without significant deficiencies.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a multi-paragraph passage containing overlapping topics to assess the prompt's ability to identify distinct main topics versus supporting details</td>
+                <td class="prompt-inputs"><strong>content:</strong> Climate change mitigation strategies have become increasingly critical as global temperatures continue to rise. Renewable energy sources, particularly solar and wind power, represent a primary avenue for reducing carbon emissions from electricity generation. However, the transition to renewable energy requires substantial infrastructure investment and technological advancement in battery storage systems to address intermittency challenges. Simultaneously, deforestation in tropical regions contributes significantly to atmospheric carbon levels, making reforestation and forest conservation essential complementary approaches. Agricultural practices also play a crucial role, as methane emissions from livestock farming account for approximately 14% of global greenhouse gas emissions. While renewable energy infrastructure and agricultural reform are distinct intervention points, both depend on international policy coordination and financing mechanisms to achieve meaningful climate impact.</td>
+                <td class="criteria">• Identifies all distinct main topics without conflating overlapping themes (e.g., renewable energy, deforestation/reforestation, agricultural emissions, and policy/financing as separate topics)<br>• Distinguishes main topics from supporting details (e.g., specific percentages and examples are details, not main topics)<br>• Recognizes that policy coordination is a cross-cutting theme rather than a standalone main topic</td>
+                <td class="output"><pre># Topics in this text:
+
+1. **Climate change mitigation** - the overarching subject
+2. **Renewable energy sources** - specifically solar and wind power
+3. **Carbon emissions reduction** - from electricity generation
+4. **Battery storage systems** - for managing renewable energy intermittency
+5. **Deforestation** - in tropical regions and its carbon impact
+6. **Reforestation and forest conservation** - as mitigation strategies
+7. **Agricultural practices** - particularly livestock farming
+8. **Methane emissions** - from agricultural sources
+9. **International policy coordination** - for climate action
+10. **Climate financing mechanisms** - funding for mitigation efforts
+
+The text essentially covers **multiple interconnected pathways for climate change mitigation**, ranging from energy systems and land use to agriculture, while emphasizing the need for coordinated global policy and financial support.</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution meets all three mandatory criteria: (1) it identifies distinct main topics without conflating overlapping themes, (2) it distinguishes main topics from supporting details, and (3) it correctly recognizes policy coordination as a cross-cutting theme. However, there are minor structural issues with topic granularity. 'Carbon emissions reduction' is more of a unifying objective than a distinct topic, and 'Methane emissions' should be nested under agricultural practices rather than listed separately. These are secondary deficiencies that don't violate the core criteria but represent suboptimal topic organization. The solution demonstrates strong understanding of the passage's structure and the distinction between main topics and supporting details.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a brief, single-topic passage to verify the prompt correctly identifies when there is only one primary subject matter</td>
+                <td class="prompt-inputs"><strong>content:</strong> Photosynthesis is the biochemical process by which plants convert light energy into chemical energy stored in glucose molecules. This process occurs primarily in the chloroplasts of plant cells, where chlorophyll pigments absorb photons from sunlight. The light-dependent reactions take place in the thylakoid membranes, generating ATP and NADPH, while the light-independent reactions, or Calvin cycle, utilize these energy carriers to fix carbon dioxide into three-phosphoglycerate and ultimately produce glucose. This fundamental metabolic pathway is essential for nearly all life on Earth, as it forms the base of most food chains and produces the oxygen necessary for aerobic respiration.</td>
+                <td class="criteria">• Identifies photosynthesis as the single primary topic<br>• Does not list unrelated or tangential topics<br>• Recognizes that subtopics (light reactions, Calvin cycle) are components of one main subject, not separate main topics</td>
+                <td class="output"><pre># Topics in This Text
+
+1. **Photosynthesis** - The main subject; the biochemical process of converting light energy to chemical energy
+
+2. **Plant Biology/Cell Structure** - Chloroplasts, plant cells, and chlorophyll pigments
+
+3. **Light Energy and Energy Conversion** - How light photons are absorbed and converted to chemical energy
+
+4. **Light-Dependent Reactions** - Processes occurring in thylakoid membranes that produce ATP and NADPH
+
+5. **Light-Independent Reactions (Calvin Cycle)** - The process of carbon dioxide fixation and glucose production
+
+6. **Biochemistry** - Chemical processes and energy carriers (ATP, NADPH, glucose)
+
+7. **Ecology/Food Chains** - The role of photosynthesis as the foundation of food chains
+
+8. **Aerobic Respiration** - The relationship between photosynthesis and oxygen production for respiration
+
+In summary, this passage covers **photosynthesis and its biological importance**, including its mechanism, cellular location, and ecological significance.</pre></td>
+                <td class="score-col"><span class="score score-low">3</span></td>
+                <td class="reasoning">The solution demonstrates good content understanding and organization, but fundamentally misinterprets the task criteria. The criteria explicitly state that subtopics should be recognized as components of one main subject, not listed as separate main topics. By presenting light-dependent reactions, Calvin cycle, and biochemistry as distinct main topics (items 2-6), the solution violates this mandatory requirement. Additionally, aerobic respiration is presented as a main topic when it is only tangentially related to the passage's focus. While the solution does identify photosynthesis as primary and includes a summary acknowledging this, the bulk of the response contradicts the stated criteria about topic hierarchy.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a passage containing implicit or subtly woven topics that require inference to ensure the prompt captures both explicit and contextually important subjects</td>
+                <td class="prompt-inputs"><strong>content:</strong> The Victorian era witnessed unprecedented industrial growth that fundamentally transformed social hierarchies and economic structures across Europe. Factory mechanization increased textile production by 400%, yet simultaneously displaced skilled artisans whose craftsmanship traditions dated back centuries. Urban migration accelerated as rural populations sought employment in manufacturing centers, creating dense, unsanitary living conditions that became breeding grounds for cholera and typhoid epidemics. Medical reformers like John Snow began investigating disease transmission patterns, laying groundwork for germ theory, while social philosophers debated whether technological progress represented genuine human advancement or merely shifted suffering from countryside to city. The railway network's expansion enabled both efficient goods distribution and mass movement of people, inadvertently facilitating disease spread across previously isolated communities.</td>
+                <td class="criteria">• Identifies explicit topics: industrial growth, mechanization, urban migration, disease epidemics, railway expansion<br>• Identifies implicit/inferred topics: social displacement, working conditions, medical science advancement, technological ethics<br>• Distinguishes between direct subjects and contextually important underlying themes</td>
+                <td class="output"><pre># Topics in this passage:
+
+1. **Industrial Revolution** - factory mechanization and textile production increases
+
+2. **Economic/Social Change** - transformation of social hierarchies and economic structures
+
+3. **Labor & Craftsmanship** - displacement of skilled artisans and traditional trades
+
+4. **Urbanization** - rural-to-urban migration and city growth
+
+5. **Public Health** - unsanitary living conditions, cholera, typhoid epidemics
+
+6. **Medical Science** - disease transmission research, germ theory development, John Snow's contributions
+
+7. **Transportation** - railway network expansion and its effects
+
+8. **Philosophy/Social Commentary** - debates about whether progress represents genuine human advancement
+
+9. **Disease Epidemiology** - how technological infrastructure spread disease across communities
+
+The passage essentially explores the **interconnected consequences of Victorian industrialization**, examining how economic and technological progress created both benefits and serious social problems.</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all mandatory criteria by identifying the five explicit topics (industrial growth, mechanization, urban migration, disease epidemics, railway expansion) and the implicit topics (social displacement, working conditions, medical science, technological ethics). It effectively distinguishes between direct subjects and contextually important underlying themes. The solution goes further by synthesizing these into a coherent understanding of Victorian industrialization's interconnected consequences. The minor weaknesses are organizational rather than substantive—the content is accurate and complete, but could be slightly more concise. The solution fully satisfies the stated evaluation criteria.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
