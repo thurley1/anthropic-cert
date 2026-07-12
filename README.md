@@ -2,6 +2,22 @@
 
 Environment for the Anthropic certification course exercises (Python SDK + Jupyter).
 
+## Course vs. current models — adaptations log
+
+The course was recorded against older models, so several examples break on today's flagship models. This is a **running list** of every deprecation/behavior change we've hit and the fix we apply — add to it whenever a new one turns up.
+
+| # | Symptom | Cause | Fix |
+|---|---------|-------|-----|
+| 1 | `NotFoundError` **404** on `claude-sonnet-4-0` | Model removed | Use `claude-sonnet-5` (balanced flagship default) |
+| 2 | `AttributeError: 'ThinkingBlock' object has no attribute 'text'` (or `content[0]` isn't the text) | Flagship models emit a **ThinkingBlock first**, so `message.content[0].text` grabs the wrong block | Use a `get_text()` helper that scans `message.content` for the first block with `.type == "text"` |
+| 3 | **400** when passing `temperature` (also `top_p` / `top_k`) | These sampling params were **removed** on flagship models (Sonnet 5, Opus 4.7/4.8, Fable 5) | Use `claude-haiku-4-5-20251001`, which still supports them |
+| 4 | **400** on assistant-message **prefilling** (last turn is `assistant`) | Last-assistant-turn prefill was **removed** on flagship models | Use `claude-haiku-4-5-20251001` (still supports prefill). Prefer **structured outputs** on flagships when you just need clean JSON |
+| 5 | **400** `additionalProperties: true is not supported` (structured outputs) | Schema constraint tightened | Every `object` in the JSON schema must set `additionalProperties: false`; give free-form fields a concrete shape |
+
+**Not affected:** `stop_sequences` works on all current models.
+
+**Model cheatsheet:** default `claude-sonnet-5` (balanced flagship) · `claude-haiku-4-5-20251001` (when a lesson needs a *removed* param or prefill — also fast/cheap for eval loops) · `claude-opus-4-8` (most capable).
+
 ## What's set up
 
 - **`.venv/`** — Python 3.13 virtual environment with `anthropic`, `python-dotenv`, `jupyter`, `ipykernel`
