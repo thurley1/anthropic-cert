@@ -16,6 +16,8 @@ The course was recorded against older models, so several examples break on today
 
 **Not affected:** `stop_sequences` works on all current models.
 
+**Capability drift (not an error, but expect it):** the course quotes eval scores from an older, weaker model. On today's `claude-haiku-4-5`, even a *naive* prompt already scores high (e.g. the prompt-engineering section's "clear and direct" step landed **8+** locally vs. the course's 3.92). The techniques still help *relatively*, but absolute scores start near the ceiling, so per-technique gains look compressed (small bumps, occasional noise). Don't expect the course's dramatic 2→8 climb.
+
 **Model cheatsheet:** default `claude-sonnet-5` (balanced flagship) · `claude-haiku-4-5-20251001` (when a lesson needs a *removed* param or prefill — also fast/cheap for eval loops) · `claude-opus-4-8` (most capable).
 
 ## What's set up
