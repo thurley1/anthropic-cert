@@ -1,0 +1,49 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "68 kg",
+      "goal": "Marathon training day with 3000+ calorie intake and carbohydrate loading for endurance performance",
+      "restrictions": "Vegetarian, no nuts"
+    },
+    "solution_criteria": [
+      "Total daily calories meet or exceed 3000 calories",
+      "Carbohydrates comprise at least 60% of total calories",
+      "Includes hydration timing recommendations aligned with training schedule",
+      "All meals and snacks respect vegetarian and nut-free restrictions"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3000+ calories with emphasis on carbohydrate loading and hydration timing"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "72 kg",
+      "goal": "Build muscle and improve endurance for competitive cycling",
+      "restrictions": "Vegan and ketogenic (low-carb, high-fat plant-based)"
+    },
+    "solution_criteria": [
+      "Meal plan includes 3 meals that are both vegan and ketogenic-compliant",
+      "Total daily macronutrients support muscle building and endurance cycling for a 72kg athlete",
+      "Plan uses creative plant-based protein and fat sources suitable for keto requirements"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with an athlete with dietary restrictions (vegan/keto) requiring creative meal substitutions while maintaining sport-specific nutritional requirements"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "90 kg",
+      "goal": "Build muscle and increase strength for weightlifting competition",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan contains 4-5 distinct eating windows distributed throughout the day",
+      "Total daily protein is at least 1.8g per kg of body weight (162g minimum)",
+      "Meals are practical, compact, and easy to prepare for an athlete",
+      "Macro ratios support strength/power goals (protein-focused with adequate carbs and fats)"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength/power athlete (weightlifter) needing protein-focused meals distributed across 4-5 eating windows with specific macro ratios"
+  }
+]

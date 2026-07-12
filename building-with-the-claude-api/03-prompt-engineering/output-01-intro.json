@@ -1,0 +1,64 @@
+[
+  {
+    "output": "# Nutrition Plan for Muscle Building & Weightlifting\n\n## Daily Calorie & Macro Targets\n\n**Estimated Daily Calories:** 2,800\u20133,200 kcal\n- Adjust based on progress (gaining ~0.5\u20131 kg/week)\n\n**Macronutrient Breakdown:**\n- **Protein:** 160\u2013180g/day (1.8\u20132g per kg bodyweight)\n- **Carbs:** 350\u2013400g/day (fuel for training)\n- **Fats:** 80\u2013100g/day (hormone production)\n\n## Food Priorities\n\n### Protein Sources\n- Lean meats (chicken, turkey, beef)\n- Eggs & egg whites\n- Fish (salmon, tilapia)\n- Greek yogurt & cottage cheese\n- Whey protein powder\n- Legumes (beans, lentils)\n\n### Carbohydrates\n- Oats, brown rice, whole grain bread\n- Potatoes & sweet potatoes\n- Pasta & quinoa\n- Fruits (bananas, berries, oranges)\n\n### Fats\n- Olive oil, avocados, nuts\n- Fatty fish (salmon, mackerel)\n- Nut butters\n\n### Micronutrients\n- Leafy greens, broccoli, carrots\n- Berries, citrus fruits\n- Consider a multivitamin\n\n## Meal Timing\n- Protein + carbs **post-workout** (within 1\u20132 hours)\n- Protein with every meal\n- Adequate hydration (3\u20134L water daily)\n\n**Track progress weekly and adjust calories if weight stalls after 2\u20133 weeks.**",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180 cm",
+        "weight": "90 kg",
+        "goal": "Build muscle and increase strength for weightlifting competition",
+        "restrictions": "None"
+      },
+      "solution_criteria": [
+        "Meal plan contains 4-5 distinct eating windows distributed throughout the day",
+        "Total daily protein is at least 1.8g per kg of body weight (162g minimum)",
+        "Meals are practical, compact, and easy to prepare for an athlete",
+        "Macro ratios support strength/power goals (protein-focused with adequate carbs and fats)"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a strength/power athlete (weightlifter) needing protein-focused meals distributed across 4-5 eating windows with specific macro ratios"
+    },
+    "score": 2,
+    "reasoning": "The solution violates all three mandatory requirements. While it provides excellent nutritional guidance and appropriate macro targets, it fails to deliver what was explicitly requested: a compact, concise 1-day meal plan with specific meals, portions, timing, and exact daily totals. The task asks for a meal plan (concrete meals at specific times), but the solution only provides a framework and food categories. A proper response would show something like: Breakfast (7am): 3 eggs + 100g oats + banana (450 kcal, 25g protein), Snack (10am): Greek yogurt + berries (200 kcal, 20g protein), etc., culminating in exact daily totals. The solution reads more like a nutrition guide than an actual meal plan."
+  },
+  {
+    "output": "# Nutrition Plan for Vegan Keto Cycling\n\nThis is **challenging but feasible**. Here's what to prioritize:\n\n## Protein (Critical Priority)\n- **Target: 1.6-2.2g per kg bodyweight** (115-160g daily)\n- Hemp seeds, pumpkin seeds, sunflower seeds\n- Nutritional yeast\n- Tofu, tempeh, edamame\n- Vegan protein powder (pea, hemp, or blended)\n- Nuts and nut butters\n- Spirulina\n\n## Fats (Energy Source)\n- Avocado oil, coconut oil, olive oil\n- Nuts and seeds (almonds, walnuts, macadamia)\n- Tahini, coconut butter\n- MCT oil for quick energy\n- Avocados\n\n## Low-Carb Vegetables\n- Leafy greens, broccoli, cauliflower, Brussels sprouts\n- Zucchini, bell peppers, asparagus\n- Mushrooms\n\n## Key Challenges & Solutions\n\n| Challenge | Solution |\n|-----------|----------|\n| **Carb needs for cycling** | Keto isn't ideal for endurance\u2014consider cyclical keto (carbs on training days) |\n| **Protein variety** | Supplement with vegan protein powder |\n| **Micronutrients** | B12 (critical), D3, iron, omega-3 from algae |\n\n## Honest Assessment\n**Standard keto + competitive cycling = suboptimal.** Consider discussing with a sports nutritionist about a **higher-carb, plant-based** approach instead, or **targeted keto** (carbs around workouts).",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178 cm",
+        "weight": "72 kg",
+        "goal": "Build muscle and improve endurance for competitive cycling",
+        "restrictions": "Vegan and ketogenic (low-carb, high-fat plant-based)"
+      },
+      "solution_criteria": [
+        "Meal plan includes 3 meals that are both vegan and ketogenic-compliant",
+        "Total daily macronutrients support muscle building and endurance cycling for a 72kg athlete",
+        "Plan uses creative plant-based protein and fat sources suitable for keto requirements"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with an athlete with dietary restrictions (vegan/keto) requiring creative meal substitutions while maintaining sport-specific nutritional requirements"
+    },
+    "score": 2,
+    "reasoning": "The solution violates all three mandatory requirements. While it demonstrates nutritional knowledge and provides valuable contextual information about the vegan keto + cycling conflict, it fundamentally fails to deliver what was requested: a specific 1-day meal plan with 3 meals, exact portions, timing, daily caloric total, and macronutrient breakdown. The output reads as educational guidance rather than an actionable meal plan. For a 72kg athlete targeting muscle building and endurance cycling, specific caloric targets (likely 2,400-2,800 calories), macro ratios, and concrete meal examples with portions are essential. The solution acknowledges these needs but does not fulfill them."
+  },
+  {
+    "output": "# Marathon Training Day Meal Plan (3000+ calories)\n\n## Breakfast (700-800 cal)\n- 2 cups oatmeal with brown sugar & cinnamon\n- 1 banana\n- 1 cup low-fat milk\n- 1 tbsp honey\n\n## Mid-Morning Snack (400-500 cal)\n- 2 slices whole wheat toast with jam\n- 1 cup fruit juice (orange or apple)\n- 1 cup yogurt\n\n## Lunch (800-900 cal)\n- 2 cups pasta with marinara sauce\n- 1 cup cooked lentils or chickpeas\n- Mixed green salad with olive oil dressing\n- 1 slice whole grain bread\n- Fresh fruit (berries or melon)\n\n## Pre-Run Snack (300-400 cal)\n- 1-2 energy bars (carb-based, no nuts)\n- 1 banana\n- Sports drink or diluted juice\n\n## Post-Run Recovery (400-500 cal)\n- Smoothie: 1.5 cups milk, 1 cup berries, 1 scoop protein powder (optional), 2 tbsp honey\n- 1 slice whole grain toast with peanut butter alternative\n\n---\n\n## Key Points:\n\u2713 **Carbs** emphasized (60-65% of calories)\n\u2713 **Protein** for muscle recovery (1.2-1.6g per kg bodyweight)\n\u2713 **Hydration** essential\u2014drink 3-4L water throughout day\n\u2713 Test this plan before the actual marathon\n\n**Total: ~3000-3100 calories** with emphasis on easily digestible carbohydrates.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178 cm",
+        "weight": "68 kg",
+        "goal": "Marathon training day with 3000+ calorie intake and carbohydrate loading for endurance performance",
+        "restrictions": "Vegetarian, no nuts"
+      },
+      "solution_criteria": [
+        "Total daily calories meet or exceed 3000 calories",
+        "Carbohydrates comprise at least 60% of total calories",
+        "Includes hydration timing recommendations aligned with training schedule",
+        "All meals and snacks respect vegetarian and nut-free restrictions"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3000+ calories with emphasis on carbohydrate loading and hydration timing"
+    },
+    "score": 3,
+    "reasoning": "The solution fails to meet mandatory requirements. While it demonstrates good understanding of vegetarian/nut-free restrictions and carb-loading principles, it critically lacks: (1) a detailed macronutrient breakdown showing grams of carbs/protein/fat and percentages, and (2) a precise daily caloric total with itemized calculations. The calorie ranges provided (700-800, 400-500, etc.) sum to approximately 3000-3100, but without exact calculations, the 3000+ calorie requirement cannot be verified. Additionally, meal timing is vague despite being essential for a training day plan. These omissions violate the mandatory requirement for 'exact foods, portions, and timing' and 'daily caloric total' and 'macronutrient breakdown.'"
+  }
+]
