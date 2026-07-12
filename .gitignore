@@ -8,3 +8,6 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Text editor tool backups (section 04)
+.backups/
