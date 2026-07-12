@@ -20,6 +20,10 @@ The course was recorded against older models, so several examples break on today
 
 **Model cheatsheet:** default `claude-sonnet-5` (balanced flagship) · `claude-haiku-4-5-20251001` (when a lesson needs a *removed* param or prefill — also fast/cheap for eval loops) · `claude-opus-4-8` (most capable).
 
+## Concept notes
+
+- **Tool functions are not Python-specific.** The course writes tool handlers in Python, but the contract with Claude is **JSON over HTTP**, not code: Claude only sees each tool's **JSON schema** and returns a `tool_use` block with JSON arguments; your backend executes *anything* and returns a `tool_result`. The executor can be any language with an Anthropic SDK (Python, TypeScript, Java, Go, Ruby, C#, PHP) or raw HTTP elsewhere — and it needn't be a "function" at all (a DB query, an HTTP call to a service, a shell command, a queue message). (Separately, **server-side tools** like `web_search` / `code_execution` run on Anthropic's infrastructure — you enable those, you don't implement them.)
+
 ## What's set up
 
 - **`.venv/`** — Python 3.13 virtual environment with `anthropic`, `python-dotenv`, `jupyter`, `ipykernel`
