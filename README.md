@@ -13,6 +13,7 @@ The course was recorded against older models, so several examples break on today
 | 3 | **400** when passing `temperature` (also `top_p` / `top_k`) | These sampling params were **removed** on flagship models (Sonnet 5, Opus 4.7/4.8, Fable 5) | Use `claude-haiku-4-5-20251001`, which still supports them |
 | 4 | **400** on assistant-message **prefilling** (last turn is `assistant`) | Last-assistant-turn prefill was **removed** on flagship models | Use `claude-haiku-4-5-20251001` (still supports prefill). Prefer **structured outputs** on flagships when you just need clean JSON |
 | 5 | **400** `additionalProperties: true is not supported` (structured outputs) | Schema constraint tightened | Every `object` in the JSON schema must set `additionalProperties: false`; give free-form fields a concrete shape |
+| 6 | **400** on extended-thinking `{"type":"enabled","budget_tokens":N}` (newest flagships) | The `enabled`+`budget_tokens` shape was replaced by **adaptive thinking** on Sonnet 5 / Opus 4.8 / 4.7 / Fable 5 | Those models: `thinking={"type":"adaptive"}` + the separate `effort` param (`budget_tokens` 400s). **Legacy shape still works on Haiku 4.5 / Opus 4.5 / Sonnet 4.6 / earlier Claude 4** — which is why the course's `enabled`+`budget_tokens` runs fine on our Haiku. Thinking also needs `temperature=1` and is **incompatible with prefilling**. |
 
 **Not affected:** `stop_sequences` works on all current models.
 
