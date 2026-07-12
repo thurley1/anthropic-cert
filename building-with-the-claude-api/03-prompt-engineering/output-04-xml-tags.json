@@ -1,0 +1,64 @@
+[
+  {
+    "output": "# One-Day Meal Plan for Weightlifting Athlete\n\n## Daily Targets\n- **Calories:** 3,200 kcal\n- **Protein:** 180g (2.0g per kg body weight)\n- **Carbohydrates:** 400g\n- **Fat:** 90g\n\n---\n\n## BREAKFAST (7:00 AM)\n**Oatmeal Power Bowl**\n- Rolled oats: 100g\n- Whole milk: 300ml\n- Banana: 150g\n- Honey: 20g\n- Almonds: 30g\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 650 |\n| Protein | 20g |\n| Carbs | 92g |\n| Fat | 18g |\n\n---\n\n## MID-MORNING SNACK (10:00 AM)\n**Protein Smoothie**\n- Greek yogurt: 200g\n- Whey protein powder: 35g\n- Berries (frozen): 80g\n- Oat milk: 250ml\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 420 |\n| Protein | 45g |\n| Carbs | 35g |\n| Fat | 8g |\n\n---\n\n## LUNCH (1:00 PM)\n**Grilled Chicken & Rice**\n- Chicken breast (skinless): 200g\n- White rice (cooked): 200g\n- Olive oil: 15ml\n- Broccoli: 150g\n- Salt & pepper: to taste\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 750 |\n| Protein | 50g |\n| Carbs | 80g |\n| Fat | 18g |\n\n---\n\n## PRE-WORKOUT SNACK (3:30 PM)\n**Quick Energy Fuel**\n- Bagel: 100g\n- Peanut butter: 25g\n- Apple: 200g\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 480 |\n| Protein | 15g |\n| Carbs | 65g |\n| Fat | 12g |\n\n---\n\n## DINNER (7:00 PM)\n**Lean Ground Beef Pasta**\n- Ground beef (93/7 lean): 180g\n- Whole wheat pasta (cooked): 180g\n- Canned tomatoes: 150g\n- Olive oil: 10ml\n- Garlic & herbs: to taste\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 750 |\n| Protein | 45g |\n| Carbs | 70g |\n| Fat | 22g |\n\n---\n\n## EVENING SNACK (9:30 PM)\n**Casein-Based Recovery**\n- Cottage cheese (2%): 250g\n- Granola: 40g\n- Honey: 10g\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 320 |\n| Protein | 30g |\n| Carbs | 35g |\n| Fat | 6g |\n\n---\n\n## DAILY TOTALS\n| Nutrient | Target | Actual |\n|----------|--------|--------|\n| **Calories** | 3,200 | 3,370 |\n| **Protein** | 180g | 205g \u2713 |\n| **Carbohydrates** | 400g | 377g \u2713 |\n| **Fat** | 90g | 84g \u2713 |\n\n---\n\n## Notes for Success\n- **Timing:** Pre-workout snack provides fast carbs 1.5 hours before training\n- **Hydration:** Drink 3-4 liters of water daily\n- **Flexibility:** Adjust portions \u00b150g carbs based on workout intensity\n- **Budget:** Average cost ~$15-18 per day\n- **Meal Prep:** Cook rice and chicken in bulk on weekends",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180 cm",
+        "weight": "90 kg",
+        "goal": "Build muscle and increase strength for weightlifting competition",
+        "restrictions": "None"
+      },
+      "solution_criteria": [
+        "Meal plan contains 4-5 distinct eating windows distributed throughout the day",
+        "Total daily protein is at least 1.8g per kg of body weight (162g minimum)",
+        "Meals are practical, compact, and easy to prepare for an athlete",
+        "Macro ratios support strength/power goals (protein-focused with adequate carbs and fats)"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a strength/power athlete (weightlifter) needing protein-focused meals distributed across 4-5 eating windows with specific macro ratios"
+    },
+    "score": 10,
+    "reasoning": "The solution comprehensively meets all mandatory requirements with precise daily caloric totals, detailed macronutrient breakdowns, and 6 distinct meals with exact foods, portions, and timing. It exceeds the secondary criteria by providing 205g protein (126% of minimum), practical meal options suitable for athletes, and macro ratios optimized for strength/power goals. The meal plan is well-structured with strategic timing around workouts and recovery. Minor deviations from targets (slightly high calories, slightly low carbs) are negligible and within acceptable ranges for practical meal planning. The inclusion of preparation notes, cost estimates, and flexibility guidance demonstrates thoroughness without exceeding the scope of the task."
+  },
+  {
+    "output": "# One-Day Vegan Ketogenic Meal Plan for Competitive Cyclist\n\n## Daily Nutrition Targets\n- **Calories:** 2,800 kcal\n- **Protein:** 140g (20%)\n- **Fat:** 200g (65%)\n- **Carbs:** 70g (10%)\n- **Fiber:** 30g+\n\n---\n\n## BREAKFAST (7:00 AM)\n**Vegan Keto Smoothie Bowl**\n- Unsweetened almond milk: 240ml\n- Hemp seeds: 30g\n- Vegan protein powder (pea/hemp): 30g\n- Almond butter: 32g\n- Coconut oil: 15ml\n- Chia seeds: 15g\n- Blackberries: 60g\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 580 |\n| Protein | 28g |\n| Fat | 42g |\n| Carbs | 22g |\n\n---\n\n## MID-MORNING SNACK (10:00 AM)\n**Nuts & Seeds Mix**\n- Raw almonds: 40g\n- Macadamia nuts: 25g\n- Pumpkin seeds: 20g\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 380 |\n| Protein | 12g |\n| Fat | 36g |\n| Carbs | 12g |\n\n---\n\n## LUNCH (1:00 PM)\n**Tofu Buddha Bowl**\n- Extra-firm tofu (pan-fried in coconut oil): 250g\n- Olive oil: 20ml\n- Nutritional yeast: 15g\n- Spinach: 150g\n- Broccoli: 120g\n- Tahini dressing: 30g\n- Lemon juice: 15ml\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 620 |\n| Protein | 32g |\n| Fat | 48g |\n| Carbs | 16g |\n\n---\n\n## PRE-WORKOUT SNACK (3:30 PM)\n**Energy Balls**\n- Coconut flour: 20g\n- Almond butter: 30g\n- Coconut oil: 10ml\n- Vanilla extract: 5ml\n- Erythritol: 10g\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 280 |\n| Protein | 8g |\n| Fat | 26g |\n| Carbs | 8g |\n\n---\n\n## DINNER (7:00 PM)\n**Tempeh Stir-Fry**\n- Tempeh (marinated & pan-fried): 200g\n- Avocado oil: 25ml\n- Zucchini noodles: 250g\n- Bell peppers: 100g\n- Mushrooms: 100g\n- Sesame seeds: 15g\n- Low-sodium tamari sauce: 15ml\n- Garlic & ginger: 10g\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 560 |\n| Protein | 28g |\n| Fat | 40g |\n| Carbs | 18g |\n\n---\n\n## EVENING SNACK (9:30 PM)\n**Fat Bomb**\n- Coconut cream (full-fat): 100ml\n- Cacao powder (unsweetened): 15g\n- MCT oil: 15ml\n- Monk fruit sweetener: 5g\n\n| Nutrient | Amount |\n|----------|--------|\n| Calories | 400 |\n| Protein | 4g |\n| Fat | 44g |\n| Carbs | 4g |\n\n---\n\n## DAILY TOTALS\n\n| Nutrient | Amount | Target | Status |\n|----------|--------|--------|--------|\n| **Calories** | 2,820 | 2,800 | \u2713 |\n| **Protein** | 142g | 140g | \u2713 |\n| **Fat** | 236g | 200",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178 cm",
+        "weight": "72 kg",
+        "goal": "Build muscle and improve endurance for competitive cycling",
+        "restrictions": "Vegan and ketogenic (low-carb, high-fat plant-based)"
+      },
+      "solution_criteria": [
+        "Meal plan includes 3 meals that are both vegan and ketogenic-compliant",
+        "Total daily macronutrients support muscle building and endurance cycling for a 72kg athlete",
+        "Plan uses creative plant-based protein and fat sources suitable for keto requirements"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with an athlete with dietary restrictions (vegan/keto) requiring creative meal substitutions while maintaining sport-specific nutritional requirements"
+    },
+    "score": 7,
+    "reasoning": "The solution comprehensively meets all mandatory requirements with precise portions, timing, and nutritional data. It successfully navigates the challenging intersection of vegan and ketogenic diets with appropriate protein sources and fat ratios. However, the plan has practical limitations: the caloric target may be higher than necessary, the pre-workout nutrition is inadequate for competitive cycling performance (even within keto constraints), and critical hydration/electrolyte guidance is absent. These are secondary criterion issues rather than mandatory failures, as the core meal plan structure is sound and the macronutrient philosophy is reasonable for the stated goals."
+  },
+  {
+    "output": "# Marathon Training Day Meal Plan\n**Target: 3000+ calories | Vegetarian | Nut-Free**\n\n---\n\n## BREAKFAST (7:00 AM) - 650 cal\n**Carb-Loading Oatmeal Bowl**\n- Rolled oats: 80g\n- Whole milk: 250ml\n- Banana: 150g\n- Honey: 30g\n- Sunflower seeds: 20g\n- Cinnamon: 2g\n\n**Macros:** 62g carbs | 18g protein | 12g fat\n\n---\n\n## MID-MORNING SNACK (10:00 AM) - 420 cal\n**Energy Smoothie**\n- Greek yogurt (plain): 200g\n- Whole grain bread: 60g\n- Dates: 50g\n- Banana: 100g\n- Low-fat milk: 200ml\n\n**Macros:** 68g carbs | 15g protein | 4g fat\n\n---\n\n## LUNCH (1:00 PM) - 880 cal\n**Vegetarian Pasta with Legumes**\n- Whole wheat pasta: 150g (cooked)\n- Lentils (cooked): 120g\n- Olive oil: 15ml\n- Bell peppers: 100g\n- Tomato sauce: 150g\n- Low-fat cheese: 40g\n- Side: White rice: 80g (cooked)\n\n**Macros:** 125g carbs | 22g protein | 14g fat\n\n---\n\n## PRE-TRAINING SNACK (3:00 PM) - 380 cal\n**Quick Energy Carbs**\n- White bagel: 85g\n- Jam (no-sugar-added): 30g\n- Orange: 200g\n\n**Macros:** 85g carbs | 8g protein | 2g fat\n\n---\n\n## POST-TRAINING RECOVERY (6:30 PM) - 520 cal\n**Chickpea & Quinoa Bowl**\n- Cooked quinoa: 100g\n- Chickpeas (cooked): 150g\n- Sweet potato: 150g\n- Spinach: 50g\n- Olive oil: 10ml\n- Lemon juice: 15ml\n\n**Macros:** 68g carbs | 16g protein | 11g fat\n\n---\n\n## DINNER (8:00 PM) - 620 cal\n**Vegetable & Tofu Stir-Fry**\n- Firm tofu: 200g\n- Brown rice: 100g (cooked)\n- Mixed vegetables (broccoli, carrots, snap peas): 250g\n- Sesame oil: 12ml\n- Soy sauce: 15ml\n- Garlic & ginger: 5g\n\n**Macros:** 58g carbs | 22g protein | 16g fat\n\n---\n\n## EVENING SNACK (10:00 PM) - 430 cal\n**Recovery Drink**\n- Whole milk: 300ml\n- Honey: 25g\n- Chickpea flour: 30g\n- Vanilla extract: 2ml\n\n**Macros:** 62g carbs | 12g protein | 6g fat\n\n---\n\n## DAILY TOTALS\n- **Calories: 3,900 cal** \u2713\n- **Carbohydrates: 528g (54%)**\n- **Protein: 113g (12%)**\n- **Fat: 65g (15%)**\n- **Fiber: 28g**\n\n---\n\n## HYDRATION\n- Water: 3-4 liters throughout day\n- Electrolyte drink during training (500ml)\n\n---\n\n## NOTES\n- High carb-to-protein ratio supports glycogen loading\n- Spread meals every 2.5-3 hours for optimal digestion\n- All portions adjustable based on actual training duration\n- Budget-friendly with affordable protein sources (lentils, chickpeas, tofu)",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178 cm",
+        "weight": "68 kg",
+        "goal": "Marathon training day with 3000+ calorie intake and carbohydrate loading for endurance performance",
+        "restrictions": "Vegetarian, no nuts"
+      },
+      "solution_criteria": [
+        "Total daily calories meet or exceed 3000 calories",
+        "Carbohydrates comprise at least 60% of total calories",
+        "Includes hydration timing recommendations aligned with training schedule",
+        "All meals and snacks respect vegetarian and nut-free restrictions"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3000+ calories with emphasis on carbohydrate loading and hydration timing"
+    },
+    "score": 6,
+    "reasoning": "The solution meets all mandatory requirements by including daily caloric total (3,900 cal), complete macronutrient breakdown, and detailed meals with exact portions and timing. All foods respect vegetarian and nut-free restrictions. However, it fails a critical secondary criterion: carbohydrates comprise only 54% of calories, not the required 60% minimum for carbohydrate loading. The macronutrient distribution is problematic\u2014at 12% protein, it's below typical athletic recommendations and creates an imbalance that undermines the stated goal of endurance performance optimization. Additionally, hydration timing recommendations are generic and not specifically aligned with the training schedule mentioned in the plan. These deficiencies in secondary criteria prevent a higher score despite meeting mandatory requirements."
+  }
+]
