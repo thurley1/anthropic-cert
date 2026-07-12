@@ -1,0 +1,64 @@
+[
+  {
+    "output": "# One-Day Meal Plan for Weightlifting Athlete\n\n**Athlete Profile:** 180 cm, 90 kg, muscle building & strength gain\n\n* **Calorie Target:** Approximately 3,200 calories\n* **Macronutrient Breakdown:** Protein (200g), Fat (95g), Carbs (420g)\n\n## Meal Plan:\n\n* **Breakfast (7:00 AM):** Scrambled eggs (3 whole eggs + 100g egg whites), oatmeal (100g dry weight) with honey (20g), and a banana (150g).\n    * Protein: 45g, Fat: 20g, Carbs: 85g\n\n* **Mid-Morning Snack (10:00 AM):** Greek yogurt (200g, full-fat) with granola (40g) and blueberries (80g).\n    * Protein: 22g, Fat: 8g, Carbs: 55g\n\n* **Lunch (1:00 PM):** Grilled lean beef (180g), brown rice (120g cooked), steamed broccoli (200g), and olive oil drizzle (10g).\n    * Protein: 52g, Fat: 15g, Carbs: 75g\n\n* **Pre-Workout Snack (3:30 PM):** White rice cakes (50g) with peanut butter (25g) and a glass of orange juice (250ml).\n    * Protein: 10g, Fat: 12g, Carbs: 65g\n\n* **Dinner (7:00 PM):** Grilled chicken breast (200g), sweet potato (250g baked), green beans (150g), and butter (10g).\n    * Protein: 52g, Fat: 15g, Carbs: 85g\n\n* **Evening Snack (9:30 PM):** Cottage cheese (150g, full-fat) with almonds (25g).\n    * Protein: 19g, Fat: 15g, Carbs: 8g\n\n---\n\nThis meal plan emphasizes high-quality protein sources, complex carbohydrates for energy and recovery, and healthy fats to support hormone production and muscle growth\u2014ideal for weightlifting performance and strength gains.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180 cm",
+        "weight": "90 kg",
+        "goal": "Build muscle and increase strength for weightlifting competition",
+        "restrictions": "None"
+      },
+      "solution_criteria": [
+        "Meal plan contains 4-5 distinct eating windows distributed throughout the day",
+        "Total daily protein is at least 1.8g per kg of body weight (162g minimum)",
+        "Meals are practical, compact, and easy to prepare for an athlete",
+        "Macro ratios support strength/power goals (protein-focused with adequate carbs and fats)"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a strength/power athlete (weightlifter) needing protein-focused meals distributed across 4-5 eating windows with specific macro ratios"
+    },
+    "score": 8,
+    "reasoning": "The solution successfully meets all mandatory requirements with daily caloric total, complete macronutrient breakdown, and detailed meals with portions and timing. It exceeds the protein requirement substantially (200g vs 162g minimum) and provides appropriate macro ratios for strength/power goals. The meal plan is practical and well-distributed throughout the day. However, there are mathematical inconsistencies between stated macros and calculated values from individual meals, suggesting calculation errors rather than conceptual flaws. The 6-meal structure slightly exceeds the 4-5 window guideline but is actually beneficial for athletic performance. These are secondary criterion issues that don't violate mandatory requirements."
+  },
+  {
+    "output": "# One-Day Meal Plan for Vegan Ketogenic Cyclist\n\n**Calorie Target:** Approximately 2,800 calories\n**Macronutrient Breakdown:** Protein (120g), Fat (220g), Carbs (35g)\n\n---\n\n## Meal Plan:\n\n* **Breakfast (7:00 AM):** Vegan keto smoothie with coconut milk (240ml), hemp seeds (30g), almond butter (40g), MCT oil (15ml), and unsweetened almond milk (120ml).\n    * Protein: 18g, Fat: 55g, Carbs: 8g\n\n* **Mid-Morning Snack (10:00 AM):** Raw macadamia nuts (50g) and olives (60g).\n    * Protein: 6g, Fat: 58g, Carbs: 4g\n\n* **Lunch (1:00 PM):** Tofu stir-fry (200g firm tofu) with coconut oil (20ml), mixed vegetables\u2014spinach (100g), zucchini (80g), mushrooms (60g)\u2014and tahini sauce (30g).\n    * Protein: 28g, Fat: 42g, Carbs: 10g\n\n* **Afternoon Snack (4:00 PM):** Avocado (150g) with sea salt and lemon juice, plus pumpkin seeds (25g).\n    * Protein: 8g, Fat: 38g, Carbs: 6g\n\n* **Dinner (7:00 PM):** Tempeh (180g) pan-fried in olive oil (20ml) with roasted cauliflower (200g), Brussels sprouts (100g), and nutritional yeast (15g).\n    * Protein: 38g, Fat: 45g, Carbs: 5g\n\n* **Evening Snack (9:00 PM):** Brazil nuts (35g) with dark chocolate (85% cacao, 20g).\n    * Protein: 4g, Fat: 32g, Carbs: 2g\n\n---\n\n**Notes:** This plan emphasizes plant-based protein sources (tofu, tempeh, hemp/pumpkin seeds) with high healthy fats from nuts, seeds, and oils to support endurance cycling while maintaining ketosis. Carbs stay minimal while providing essential micronutrients. Adjust portions based on training intensity.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178 cm",
+        "weight": "72 kg",
+        "goal": "Build muscle and improve endurance for competitive cycling",
+        "restrictions": "Vegan and ketogenic (low-carb, high-fat plant-based)"
+      },
+      "solution_criteria": [
+        "Meal plan includes 3 meals that are both vegan and ketogenic-compliant",
+        "Total daily macronutrients support muscle building and endurance cycling for a 72kg athlete",
+        "Plan uses creative plant-based protein and fat sources suitable for keto requirements"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with an athlete with dietary restrictions (vegan/keto) requiring creative meal substitutions while maintaining sport-specific nutritional requirements"
+    },
+    "score": 8,
+    "reasoning": "The solution fully satisfies all mandatory requirements with precise caloric totals, detailed macronutrient breakdowns, and six meals with exact portions and timing. All meals are authentically vegan and ketogenic-compliant with thoughtful plant-based protein and fat selections. The macronutrient distribution logically supports the stated goals, though the caloric and protein targets could be optimized higher for competitive cycling. The secondary criteria are substantially met, with only minor gaps in training-specific nutrition guidance that don't undermine the core meal plan's quality."
+  },
+  {
+    "output": "# One-Day Marathon Training Meal Plan for Vegetarian Athlete\n\n**Calorie Target:** Approximately 3100 calories\n**Macronutrient Breakdown:** Protein (105g), Fat (75g), Carbs (420g)\n\n---\n\n## Meal Plan:\n\n### **Breakfast (6:30 AM):** Pre-Training Carb Load\nOatmeal (100g dry weight) with banana (150g), honey (20g), and sunflower seeds (20g). Low-fat milk (240ml).\n- Protein: 16g, Fat: 12g, Carbs: 95g\n\n### **Mid-Morning Snack (9:00 AM):** Quick Energy Boost\nRice cakes (50g) with hummus (60g) and sliced cucumber (80g). Orange juice (250ml).\n- Protein: 8g, Fat: 8g, Carbs: 65g\n\n### **Lunch (12:30 PM):** Protein & Carb-Rich\nLentil and vegetable curry (250g cooked) with jasmine rice (150g cooked). Side of steamed carrots (100g) with olive oil (10ml).\n- Protein: 18g, Fat: 12g, Carbs: 95g\n\n### **Pre-Run Snack (3:00 PM):** Quick Digestion\nSports drink (500ml with 6% carbs) and energy bar (60g, nut-free).\n- Protein: 4g, Fat: 5g, Carbs: 80g\n\n### **Post-Run Recovery Meal (6:00 PM):** Within 30 minutes of finishing\nPasta (120g dry weight cooked) with marinara sauce (200g) and chickpea-based veggie balls (120g). Whole wheat bread (50g).\n- Protein: 28g, Fat: 12g, Carbs: 125g\n\n### **Dinner (8:00 PM):** Light Evening Meal\nBaked sweet potato (200g) with black beans (150g cooked), saut\u00e9ed spinach (100g) with olive oil (10ml), and nutritional yeast (15g).\n- Protein: 15g, Fat: 12g, Carbs: 75g\n\n### **Evening Snack (10:00 PM):** Recovery Support\nGreek yogurt (200g, non-fat) with granola (40g, nut-free) and blueberries (80g).\n- Protein: 16g, Fat: 14g, Carbs: 85g\n\n---\n\n**Note:** This plan emphasizes easily digestible carbohydrates to fuel endurance training while providing adequate protein for muscle recovery. All foods are vegetarian and nut-free. Hydration is critical\u2014aim for 3-4 liters of water throughout the day.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "178 cm",
+        "weight": "68 kg",
+        "goal": "Marathon training day with 3000+ calorie intake and carbohydrate loading for endurance performance",
+        "restrictions": "Vegetarian, no nuts"
+      },
+      "solution_criteria": [
+        "Total daily calories meet or exceed 3000 calories",
+        "Carbohydrates comprise at least 60% of total calories",
+        "Includes hydration timing recommendations aligned with training schedule",
+        "All meals and snacks respect vegetarian and nut-free restrictions"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3000+ calories with emphasis on carbohydrate loading and hydration timing"
+    },
+    "score": 6,
+    "reasoning": "The solution provides a well-structured, practical meal plan that meets the mandatory requirements of including daily caloric total, macronutrient breakdown, and meals with exact foods, portions, and timing. However, it fails to meet one of the four secondary criteria: carbohydrates comprise only 54.2% of total calories rather than the required 60%. Additionally, hydration timing recommendations lack specificity relative to the training schedule. The vegetarian and nut-free restrictions are properly respected throughout. While the plan is comprehensive and athlete-appropriate, the carbohydrate percentage shortfall is a measurable criterion violation that prevents a higher score."
+  }
+]
