@@ -3,3 +3,5 @@ python-dotenv
 jupyter
 ipykernel
 voyageai
+mcp[cli]
+prompt-toolkit
