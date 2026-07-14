@@ -76,3 +76,7 @@ One top-level folder per CPN course. The `#` is the suggested order to take them
 | 4 | `04-claude-code-in-action/` | 3 sections: what is Claude Code, getting hands on, hooks & the SDK |
 
 Notebooks are numbered to match course order (sectioned courses use numbered section subfolders). See each course's own `README.md` for its lesson list.
+
+## Certification exam
+
+These courses prepare for the Claude Certified Architect – Foundations exam (CCAR-F). See [exam-prep.md](exam-prep.md) for the exam blueprint, how the courses map to the tested domains, and the planned practice additions for the areas the courses cover least (notably Agent SDK multi-agent orchestration).
