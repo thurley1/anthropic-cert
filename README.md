@@ -1,87 +1,52 @@
 # Anthropic Certification — Course Workspace
 
-Environment for the Anthropic certification course exercises (Python SDK + Jupyter).
+Jupyter + Python-SDK workspace for the **Anthropic CPN (Claude Partner Network)** learning path. One shared `.venv` and `.env` at the root serve every course; each course has its own top-level folder.
 
-## Course vs. current models — adaptations log
+> **New here?** Do the [one-time setup](#setup) first. Day to day, the two sections you'll actually use as a prep assistant are the **model cheatsheet** and the **gotchas log** directly below.
 
-The course was recorded against older models, so several examples break on today's flagship models. This is a **running list** of every deprecation/behavior change we've hit and the fix we apply — add to it whenever a new one turns up.
+## Model cheatsheet — which model, when
 
-| # | Symptom | Cause | Fix |
-|---|---------|-------|-----|
-| 1 | `NotFoundError` **404** on `claude-sonnet-4-0` | Model removed | Use `claude-sonnet-5` (balanced flagship default) |
-| 2 | `AttributeError: 'ThinkingBlock' object has no attribute 'text'` (or `content[0]` isn't the text) | Flagship models emit a **ThinkingBlock first**, so `message.content[0].text` grabs the wrong block | Use a `get_text()` helper that scans `message.content` for the first block with `.type == "text"` |
-| 3 | **400** when passing `temperature` (also `top_p` / `top_k`) | These sampling params were **removed** on flagship models (Sonnet 5, Opus 4.7/4.8, Fable 5) | Use `claude-haiku-4-5-20251001`, which still supports them |
-| 4 | **400** on assistant-message **prefilling** (last turn is `assistant`) | Last-assistant-turn prefill was **removed** on flagship models | Use `claude-haiku-4-5-20251001` (still supports prefill). Prefer **structured outputs** on flagships when you just need clean JSON |
-| 5 | **400** `additionalProperties: true is not supported` (structured outputs) | Schema constraint tightened | Every `object` in the JSON schema must set `additionalProperties: false`; give free-form fields a concrete shape |
-| 6 | **400** on extended-thinking `{"type":"enabled","budget_tokens":N}` (newest flagships) | The `enabled`+`budget_tokens` shape was replaced by **adaptive thinking** on Sonnet 5 / Opus 4.8 / 4.7 / Fable 5 | Those models: `thinking={"type":"adaptive"}` + the separate `effort` param (`budget_tokens` 400s). **Legacy shape still works on Haiku 4.5 / Opus 4.5 / Sonnet 4.6 / earlier Claude 4** — which is why the course's `enabled`+`budget_tokens` runs fine on our Haiku. Thinking also needs `temperature=1` and is **incompatible with prefilling**. |
-| 7 | Prompt cache silently never writes (`cache_creation_input_tokens` stays 0) on Haiku | **Min-to-cache is model-dependent**, and the course's stated **1024** is wrong for Haiku | **Haiku 4.5 needs ≥4,096 tokens** in the cached prefix (Sonnet/Opus 1,024; Fable/Mythos 512; Haiku 3.5 = 2,048). Not an error — it just doesn't cache below the threshold. `cache_control:{"type":"ephemeral"}` is otherwise current; default TTL is **5 min** (course says 1 h), `"ttl":"1h"` for the hour tier. |
+| When | Use |
+|------|-----|
+| **Default** for most exercises | `claude-sonnet-5` (balanced flagship) |
+| Lesson needs a **removed param** (`temperature`/`top_p`/`top_k`) or **assistant prefill** | `claude-haiku-4-5-20251001` (still supports them; also fast/cheap for eval loops) |
+| Need the **most capable** model | `claude-opus-4-8` |
 
-**Not affected:** `stop_sequences` works on all current models.
+## Gotchas log — course vs. current models
 
-**Capability drift (not an error, but expect it):** the course quotes eval scores from an older, weaker model. On today's `claude-haiku-4-5`, even a *naive* prompt already scores high (e.g. the prompt-engineering section's "clear and direct" step landed **8+** locally vs. the course's 3.92). The techniques still help *relatively*, but absolute scores start near the ceiling, so per-technique gains look compressed (small bumps, occasional noise). Don't expect the course's dramatic 2→8 climb.
+The course was recorded on older models, so some examples break on today's flagships. Each row is a break we hit and the fix. **Add to this whenever a new one turns up.**
 
-**Model cheatsheet:** default `claude-sonnet-5` (balanced flagship) · `claude-haiku-4-5-20251001` (when a lesson needs a *removed* param or prefill — also fast/cheap for eval loops) · `claude-opus-4-8` (most capable).
+| Symptom | Fix |
+|---------|-----|
+| **404** on `claude-sonnet-4-0` | Model removed → use `claude-sonnet-5`. |
+| `ThinkingBlock has no attribute 'text'` / `content[0]` is wrong | Flagships emit a **ThinkingBlock first** → scan `message.content` for the first block with `.type == "text"` (a `get_text()` helper). |
+| **400** on `temperature` / `top_p` / `top_k` | Removed on flagships → use `claude-haiku-4-5-20251001`. |
+| **400** on assistant **prefill** (last turn is `assistant`) | Removed on flagships → use Haiku 4.5, or prefer **structured outputs** for clean JSON. |
+| **400** `additionalProperties: true is not supported` | Every `object` in a structured-output schema must set `additionalProperties: false`. |
+| **400** on thinking `{"type":"enabled","budget_tokens":N}` | Flagships use `thinking={"type":"adaptive"}` + `effort`. Legacy `enabled`+`budget_tokens` **still works on Haiku 4.5** (why the course code runs there). Thinking needs `temperature=1` and can't combine with prefill. |
+| Prompt cache never writes (`cache_creation_input_tokens` stays 0) | **Min-to-cache is model-dependent**; course's "1024" is wrong for Haiku. **Haiku 4.5 needs ≥4,096 tokens** cached (Sonnet/Opus 1,024; Fable/Mythos 512). Default TTL is **5 min** (not 1 h); pass `"ttl":"1h"` for the hour tier. |
+
+**Fine as-is:** `stop_sequences` works on all current models.
+
+**Score drift (expected, not a bug):** the course quotes eval scores from a weaker model. On `claude-haiku-4-5` even a naive prompt scores near the ceiling (e.g. "clear and direct" hit **8+** locally vs. the course's 3.92), so per-technique gains look compressed. Don't expect the course's dramatic 2→8 climb.
 
 ## Concept notes
 
-- **Tool functions are not Python-specific.** The course writes tool handlers in Python, but the contract with Claude is **JSON over HTTP**, not code: Claude only sees each tool's **JSON schema** and returns a `tool_use` block with JSON arguments; your backend executes *anything* and returns a `tool_result`. The executor can be any language with an Anthropic SDK (Python, TypeScript, Java, Go, Ruby, C#, PHP) or raw HTTP elsewhere — and it needn't be a "function" at all (a DB query, an HTTP call to a service, a shell command, a queue message). (Separately, **server-side tools** like `web_search` / `code_execution` run on Anthropic's infrastructure — you enable those, you don't implement them.)
+- **Tool functions aren't Python-specific.** The course writes handlers in Python, but the contract with Claude is **JSON over HTTP**: Claude sees each tool's **JSON schema** and returns a `tool_use` block with JSON args; your backend can execute *anything* (a DB query, an HTTP call, a shell command) in any language, then returns a `tool_result`. (Separately, **server-side tools** like `web_search` / `code_execution` run on Anthropic's infra — you enable them, you don't implement them.)
 
-## What's set up
+## Setup
 
-- **`.venv/`** — Python 3.13 virtual environment with `anthropic`, `python-dotenv`, `jupyter`, `ipykernel`
-- **Jupyter kernel** — registered as **Python (anthropic-cert)**
-- **`.env.example`** — template for your API key
-- **Section folders** — notebooks are organized by course section (see below)
-
-## Folder structure
-
-This repo holds work from the **Claude Partner Network** learning path — one top-level folder per course. A single shared `.venv` and `.env` at the repo root serve every course.
-
-| Course folder | CPN course |
-|---------------|------------|
-| `building-with-the-claude-api/` | Building with the Claude API |
-| `introduction-to-agent-skills/` | Introduction to Agent Skills |
-| `introduction-to-mcp/` | Introduction to Model Context Protocol |
-| `claude-code-in-action/` | Claude Code in Action |
-
-Within `building-with-the-claude-api/`, notebooks are grouped by course section, numbered to match the course order:
-
-| Section folder | Course section |
-|----------------|----------------|
-| `01-accessing-the-api/` | Accessing Claude with the API (requests, multi-turn, system prompts, temperature, streaming) |
-| `02-prompt-evaluation/` | Prompt evaluation |
-| `03-prompt-engineering/` | Prompt engineering techniques |
-| `04-tool-use/` | Tool use with Claude |
-| `05-rag/` | RAG and Agentic Search |
-| `06-features/` | Features of Claude |
-| `07-mcp/` | Model Context Protocol |
-| `08-anthropic-apps/` | Anthropic apps — Claude Code and computer use |
-| `09-agents-and-workflows/` | Agents and workflows |
-
-`.env`, `requirements.txt`, and this README stay at the repo root. `.vscode/settings.json` pins the Jupyter working directory to the repo root so `load_dotenv()` finds `.env` from any course/section folder, however deeply nested.
-
-## One-time: add your API key
-
-1. Get a key at https://console.anthropic.com/settings/keys
-2. Copy `.env.example` to `.env`
-3. Paste your key into `.env` (this file is git-ignored, so it never gets committed)
+**One-time — add your API key:**
 
 ```powershell
-Copy-Item .env.example .env
+Copy-Item .env.example .env   # then paste your key from https://console.anthropic.com/settings/keys
 ```
 
-## Launch Jupyter
+`.env` is git-ignored. `.vscode/settings.json` pins the Jupyter working dir to the repo root, so `load_dotenv()` finds `.env` from any nested folder.
 
-```powershell
-.\.venv\Scripts\Activate.ps1
-jupyter notebook
-```
+**Run a notebook** — open any `.ipynb` in VS Code and pick the **Python (anthropic-cert)** kernel. (Browser Jupyter also works: `.\.venv\Scripts\Activate.ps1; jupyter notebook`.)
 
-Then open a notebook (e.g. `building-with-the-claude-api/01-accessing-the-api/01-getting-started.ipynb`) and confirm the kernel (top-right) is **Python (anthropic-cert)**.
-
-> Prefer VS Code? Just open the folder, open the `.ipynb`, and pick the **Python (anthropic-cert)** kernel — no need to launch Jupyter in a browser.
-
-## Recreate the environment elsewhere
+**Recreate the env elsewhere:**
 
 ```powershell
 python -m venv .venv
@@ -89,3 +54,16 @@ python -m venv .venv
 pip install -r requirements.txt
 python -m ipykernel install --user --name anthropic-cert --display-name "Python (anthropic-cert)"
 ```
+
+## Course map
+
+One top-level folder per CPN course:
+
+| Course folder | Status |
+|---------------|--------|
+| `building-with-the-claude-api/` | ✅ Complete — 9 sections (accessing the API, prompt eval, prompt engineering, tool use, RAG, features, **MCP**, Anthropic apps, agents & workflows) |
+| `introduction-to-agent-skills/` | ✅ Complete — 6 flat numbered notebooks |
+| `claude-code-in-action/` | ✅ Complete — sectioned |
+| `introduction-to-mcp/` | 🚧 In progress |
+
+Notebooks are numbered to match course order (sectioned courses use numbered section subfolders). See each course's own `README.md` for its lesson list.
