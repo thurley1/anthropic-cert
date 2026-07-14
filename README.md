@@ -66,13 +66,13 @@ python -m ipykernel install --user --name anthropic-cert --display-name "Python 
 
 ## Course map
 
-One top-level folder per CPN course:
+One top-level folder per CPN course. The `#` is the suggested order to take them in:
 
-| Course folder | Status |
-|---------------|--------|
-| `building-with-the-claude-api/` | Complete. 9 sections: accessing the API, prompt eval, prompt engineering, tool use, RAG, features, MCP, Anthropic apps, agents & workflows |
-| `introduction-to-agent-skills/` | Complete. 6 flat numbered notebooks |
-| `claude-code-in-action/` | Complete. Sectioned |
-| `introduction-to-mcp/` | In progress |
+| # | Course folder | Status |
+|---|---------------|--------|
+| 1 | `building-with-the-claude-api/` | Complete. 9 sections: accessing the API, prompt eval, prompt engineering, tool use, RAG, features, MCP, Anthropic apps, agents & workflows |
+| 2 | `introduction-to-agent-skills/` | Complete. 6 flat numbered notebooks |
+| 3 | `introduction-to-mcp/` | In progress |
+| 4 | `claude-code-in-action/` | Complete. Sectioned |
 
 Notebooks are numbered to match course order (sectioned courses use numbered section subfolders). See each course's own `README.md` for its lesson list.
