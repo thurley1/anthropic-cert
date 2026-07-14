@@ -4,15 +4,15 @@ Part of the **Anthropic CPN (Claude Partner Network)** learning path — course 
 
 > 🚧 **In progress.** Sections/notebooks live here, following the same pattern as [`../building-with-the-claude-api/`](../building-with-the-claude-api) (the completed first course).
 >
-> **Note on this course's notebooks:** unlike course 1, these are **synthesized recaps** — the lesson source wasn't captured, so each notebook is a current, accurate write-up of the topic in *today's* Claude Code (which has drifted from the course recording), clearly labeled as such. They're study references, not verbatim course content.
->
 > **Course outline:** *What is Claude Code?* (Introduction · What is a coding assistant? · Claude Code in action) → *Getting hands on* → *Hooks and the SDK* → *Wrapping up* (quiz + summary).
 >
 > **Done — "What is Claude Code?"** ([`./01-what-is-claude-code/`](./01-what-is-claude-code)): Introduction · What is a coding assistant? · Claude Code in action.
 >
-> **Done — "Getting hands on"** ([`./02-getting-hands-on/`](./02-getting-hands-on)): Claude Code setup · Project setup · Adding context · Making changes · Controlling context · Custom commands · MCP servers with Claude Code · **GitHub integration** (this last one built faithfully from the lesson text, not synthesized).
+> **Done — "Getting hands on"** ([`./02-getting-hands-on/`](./02-getting-hands-on)): Claude Code setup · Project setup · Adding context · Making changes · Controlling context · Custom commands · MCP servers with Claude Code · GitHub integration.
 >
-> **Remaining:** the **Hooks and the SDK** section (7 lessons) · **Wrapping up** (quiz + summary). Build these faithfully as you work through them (paste the lesson text).
+> **In progress — "Hooks and the SDK"** ([`./03-hooks-and-the-sdk/`](./03-hooks-and-the-sdk)): Introducing hooks · Defining hooks · Implementing a hook · Gotchas around hooks · Useful hooks! — remaining: Another useful hook · The Claude Code SDK.
+>
+> **Remaining:** finish *Hooks and the SDK* · **Wrapping up** (quiz + summary).
 
 > Note: the first course introduces Claude Code — see [`../building-with-the-claude-api/08-anthropic-apps/`](../building-with-the-claude-api/08-anthropic-apps) — so expect this dedicated course to go much deeper. (Fittingly, this whole repo is built *using* Claude Code.)
 
