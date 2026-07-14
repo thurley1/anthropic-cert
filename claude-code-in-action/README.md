@@ -10,9 +10,9 @@ Part of the **Anthropic CPN (Claude Partner Network)** learning path — course 
 >
 > **Done — "Getting hands on"** ([`./02-getting-hands-on/`](./02-getting-hands-on)): Claude Code setup · Project setup · Adding context · Making changes · Controlling context · Custom commands · MCP servers with Claude Code · GitHub integration.
 >
-> **In progress — "Hooks and the SDK"** ([`./03-hooks-and-the-sdk/`](./03-hooks-and-the-sdk)): Introducing hooks · Defining hooks · Implementing a hook · Gotchas around hooks · Useful hooks! — remaining: Another useful hook · The Claude Code SDK.
+> **Done — "Hooks and the SDK"** ([`./03-hooks-and-the-sdk/`](./03-hooks-and-the-sdk)): Introducing hooks · Defining hooks · Implementing a hook · Gotchas around hooks · Useful hooks! · Another useful hook · The Claude Code SDK.
 >
-> **Remaining:** finish *Hooks and the SDK* · **Wrapping up** (quiz + summary).
+> **Remaining:** **Wrapping up** (quiz + summary).
 
 > Note: the first course introduces Claude Code — see [`../building-with-the-claude-api/08-anthropic-apps/`](../building-with-the-claude-api/08-anthropic-apps) — so expect this dedicated course to go much deeper. (Fittingly, this whole repo is built *using* Claude Code.)
 
