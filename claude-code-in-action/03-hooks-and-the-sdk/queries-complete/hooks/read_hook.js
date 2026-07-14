@@ -1,19 +1,14 @@
-async function main() {
-  const chunks = [];
-  for await (const chunk of process.stdin) {
-    chunks.push(chunk);
-  }
-  const toolArgs = JSON.parse(Buffer.concat(chunks).toString());
-
-  // readPath is the path to the file that Claude is trying to read
-  const readPath =
-    toolArgs.tool_input?.file_path || toolArgs.tool_input?.path || "";
-
-  // TODO: ensure Claude isn't trying to read the .env file
+// Current lesson version (Read-only). The course zip shipped an older `for await`
+// variant that also checked tool_input.path; the current text uses this form.
+process.stdin.setEncoding("utf8");
+let input = "";
+process.stdin.on("data", (d) => (input += d));
+process.stdin.on("end", () => {
+  const toolArgs = JSON.parse(input);
+  const readPath = toolArgs.tool_input?.file_path || "";
   if (readPath.includes(".env")) {
     console.error("You cannot read the .env file");
     process.exit(2);
   }
-}
-
-main();
+  process.exit(0);
+});
