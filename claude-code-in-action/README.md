@@ -8,9 +8,11 @@ Part of the **Anthropic CPN (Claude Partner Network)** learning path — course 
 >
 > **Course outline:** *What is Claude Code?* (Introduction · What is a coding assistant? · Claude Code in action) → *Getting hands on* → *Hooks and the SDK* → *Wrapping up* (quiz + summary).
 >
-> **Done — "Getting hands on"** (see [`./getting-hands-on/`](./getting-hands-on)): Claude Code setup · Project setup · Adding context · Making changes · Controlling context · Custom commands · MCP servers with Claude Code · **GitHub integration** (this last one built faithfully from the lesson text, not synthesized).
+> **Done — "What is Claude Code?"** ([`./01-what-is-claude-code/`](./01-what-is-claude-code)): Introduction · What is a coding assistant? · Claude Code in action.
 >
-> **Remaining:** the intro section *"What is Claude Code?"* (3 lessons) · the **Hooks and the SDK** section (7 lessons) · **Wrapping up**.
+> **Done — "Getting hands on"** ([`./02-getting-hands-on/`](./02-getting-hands-on)): Claude Code setup · Project setup · Adding context · Making changes · Controlling context · Custom commands · MCP servers with Claude Code · **GitHub integration** (this last one built faithfully from the lesson text, not synthesized).
+>
+> **Remaining:** the **Hooks and the SDK** section (7 lessons) · **Wrapping up** (quiz + summary). Build these faithfully as you work through them (paste the lesson text).
 
 > Note: the first course introduces Claude Code — see [`../building-with-the-claude-api/08-anthropic-apps/`](../building-with-the-claude-api/08-anthropic-apps) — so expect this dedicated course to go much deeper. (Fittingly, this whole repo is built *using* Claude Code.)
 
