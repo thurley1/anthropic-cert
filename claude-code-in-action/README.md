@@ -12,7 +12,7 @@ Part of the **Anthropic CPN (Claude Partner Network)** learning path — course 
 >
 > **Done — "Hooks and the SDK"** ([`./03-hooks-and-the-sdk/`](./03-hooks-and-the-sdk)): Introducing hooks · Defining hooks · Implementing a hook · Gotchas around hooks · Useful hooks! · Another useful hook · The Claude Code SDK.
 >
-> **Remaining:** **Wrapping up** (quiz + summary).
+> **Remaining:** just the **Summary and next steps** page (the Quiz on Claude Code is done — 8/8). All lessons are built.
 
 > Note: the first course introduces Claude Code — see [`../building-with-the-claude-api/08-anthropic-apps/`](../building-with-the-claude-api/08-anthropic-apps) — so expect this dedicated course to go much deeper. (Fittingly, this whole repo is built *using* Claude Code.)
 
