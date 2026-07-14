@@ -2,7 +2,7 @@
 
 Part of the **Anthropic CPN (Claude Partner Network)** learning path — course 2 of 4 in this repo.
 
-> 🚧 **In progress.** A short, flat course — numbered notebooks live directly in this folder, matching the course order.
+> ✅ **Complete.** A short, flat course — numbered notebooks live directly in this folder, matching the course order.
 >
 > **Lessons:** What are skills? → Creating your first skill → Configuration and multi-file skills → Skills vs. other Claude Code features → Sharing skills → Troubleshooting skills.
 
